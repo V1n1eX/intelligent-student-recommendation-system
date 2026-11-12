@@ -1,0 +1,56 @@
+{% extends 'recommender/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <span class="badge bg-light text-primary mb-3">Academic decision support</span>
+                <h1 class="display-5 fw-bold">Find study paths that match your ambitions.</h1>
+                <p class="lead">Use an explainable recommendation engine to discover programmes and learning resources aligned with your academic background, interests, and career goals.</p>
+                <div class="d-flex gap-3 flex-wrap mt-4">
+                    {% if user.is_authenticated %}
+                        <a class="btn btn-primary" href="{% url 'dashboard' %}">Go to dashboard</a>
+                    {% else %}
+                        <a class="btn btn-primary" href="{% url 'register' %}">Create account</a>
+                        <a class="btn btn-outline-primary" href="{% url 'login' %}">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card shadow-sm border-0 p-4">
+                    <h3>How it works</h3>
+                    <ol class="mb-0 ps-3">
+                        <li>Create a student profile.</li>
+                        <li>Enter your academic interests and goals.</li>
+                        <li>Generate programme and resource recommendations.</li>
+                        <li>Review explanations and next steps.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container py-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 p-4">
+                <h4>Personalised matches</h4>
+                <p>Recommendations are shaped by academic background, interests, subjects, study mode, and career preferences.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 p-4">
+                <h4>Explainable reasons</h4>
+                <p>Each result highlights the factors driving the match so the recommendation remains transparent and understandable.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 p-4">
+                <h4>Academic discovery</h4>
+                <p>Students can compare options and review resources that support the skills needed for a chosen field.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

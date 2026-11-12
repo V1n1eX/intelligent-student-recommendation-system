@@ -1,0 +1,30 @@
+{% extends 'recommender/base.html' %}
+{% block title %}Recommendations{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow-sm border-0 p-4">
+        <h2 class="mb-3">{% if kind == 'programmes' %}Programme recommendations{% else %}Resource recommendations{% endif %}</h2>
+        {% if recommendations %}
+            {% for item in recommendations %}
+                {% if kind == 'programmes' %}
+                    <div class="border rounded p-3 mb-3">
+                        <h4>{{ item.programme_name|default:'Programme match' }}</h4>
+                        <p><strong>Score:</strong> {{ item.score }}%</p>
+                        <p>{{ item.explanation }}</p>
+                        <a class="btn btn-outline-primary btn-sm" href="{% url 'programme_detail' item.programme_id %}">View details</a>
+                    </div>
+                {% else %}
+                    <div class="border rounded p-3 mb-3">
+                        <h4>{{ item.resource_title|default:'Resource match' }}</h4>
+                        <p><strong>Score:</strong> {{ item.score }}%</p>
+                        <p>{{ item.explanation }}</p>
+                        <a class="btn btn-outline-primary btn-sm" href="{% url 'resource_detail' item.resource_id %}">View details</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>No recommendations are available yet. Generate a new set from the dashboard.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'recommender/base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<section class="auth-page">
+    <div class="auth-card">
+        <div class="auth-intro">
+            <span class="auth-eyebrow">Student recommendation system</span>
+            <h1>Welcome back</h1>
+            <p>Sign in to continue exploring programmes and learning resources matched to you.</p>
+        </div>
+        <form method="post" class="auth-form">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" id="username" value="{{ username }}" autocomplete="username" autocapitalize="none" required autofocus>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password" autocomplete="current-password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 auth-submit">Sign in</button>
+        </form>
+        <p class="auth-switch">New here? <a href="{% url 'register' %}">Create an account</a></p>
+    </div>
+</section>
+{% endblock %}

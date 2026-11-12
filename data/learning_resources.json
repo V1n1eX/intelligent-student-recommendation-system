@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Python for Data Analysis",
+    "description": "A practical resource for learning Python workflows used in data exploration and analytical modelling.",
+    "subject": "Data Science",
+    "academic_level": "Undergraduate",
+    "category": "Course",
+    "learning_format": "Online",
+    "difficulty_level": "Intermediate",
+    "skills_covered": ["Python", "Data Analysis", "Statistics"],
+    "interest_tags": ["data", "analytics", "programming"],
+    "resource_url": "https://www.example.com/python-data-analysis",
+    "is_active": true
+  },
+  {
+    "title": "Cybersecurity Fundamentals",
+    "description": "Build foundational understanding of digital threats, security controls, and risk mitigation strategies.",
+    "subject": "Cybersecurity",
+    "academic_level": "Undergraduate",
+    "category": "Course",
+    "learning_format": "Hybrid",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["Security", "Networking", "Risk Management"],
+    "interest_tags": ["security", "technology", "networking"],
+    "resource_url": "https://www.example.com/cybersecurity-fundamentals",
+    "is_active": true
+  },
+  {
+    "title": "Business Strategy Essentials",
+    "description": "Learn strategic decision-making, market analysis, and leadership approaches for modern organisations.",
+    "subject": "Business Administration",
+    "academic_level": "Undergraduate",
+    "category": "Book",
+    "learning_format": "Self-paced",
+    "difficulty_level": "Intermediate",
+    "skills_covered": ["Leadership", "Strategy", "Communication"],
+    "interest_tags": ["business", "leadership", "strategy"],
+    "resource_url": "https://www.example.com/business-strategy-essentials",
+    "is_active": true
+  },
+  {
+    "title": "Sustainable Development Toolkit",
+    "description": "Introduces environmental policy, sustainable design, and impact assessment principles.",
+    "subject": "Environmental Studies",
+    "academic_level": "Undergraduate",
+    "category": "Workshop",
+    "learning_format": "Face-to-face",
+    "difficulty_level": "Intermediate",
+    "skills_covered": ["Research", "Sustainability", "Environmental Analysis"],
+    "interest_tags": ["environment", "sustainability", "policy"],
+    "resource_url": "https://www.example.com/sustainable-development-toolkit",
+    "is_active": true
+  },
+  {
+    "title": "Algorithms and Problem Solving",
+    "description": "Covers algorithmic thinking, complexity, and coding strategies used in software design practice.",
+    "subject": "Computer Science",
+    "academic_level": "Undergraduate",
+    "category": "Course",
+    "learning_format": "Online",
+    "difficulty_level": "Intermediate",
+    "skills_covered": ["Algorithms", "Programming", "Problem Solving"],
+    "interest_tags": ["coding", "technology", "software"],
+    "resource_url": "https://www.example.com/algorithms-problem-solving",
+    "is_active": true
+  }
+]

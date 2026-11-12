@@ -1,0 +1,19 @@
+{% extends 'recommender/base.html' %}
+{% block title %}Resource details{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow-sm border-0 p-4">
+        <h2>{{ resource.title }}</h2>
+        <p class="text-muted">{{ resource.subject }} · {{ resource.category }}</p>
+        <p>{{ resource.description }}</p>
+        <p><strong>Academic level:</strong> {{ resource.academic_level }}</p>
+        <p><strong>Difficulty:</strong> {{ resource.difficulty_level }}</p>
+        <p><strong>Learning format:</strong> {{ resource.learning_format }}</p>
+        <p><strong>Skills covered:</strong> {{ resource.skills_covered }}</p>
+        {% if resource.resource_url %}
+            <a href="{{ resource.resource_url }}" target="_blank" rel="noreferrer" class="btn btn-primary">Open resource</a>
+        {% endif %}
+        <a href="{% url 'resource_recommendations' %}" class="btn btn-outline-primary ms-2">Back to resources</a>
+    </div>
+</div>
+{% endblock %}
