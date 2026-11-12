@@ -110,7 +110,7 @@ Screenshots can be added to the `results/` folder and linked from the portfolio 
 This project was developed as a complete academic software engineering assignment.
 
 ## Portfolio URL
-The three-page static portfolio is in the `portfolio/` directory. The included GitHub Actions workflow deploys that directory to GitHub Pages on pushes to `main`. Enable GitHub Pages with **GitHub Actions** as the build and deployment source after pushing the project.
+The three-page static portfolio is in the `portfolio/` directory. The included GitHub Actions workflow deploys that directory to GitHub Pages on pushes to `main`. Enable GitHub Pages with **GitHub Actions** as the build and deployment source in repository Settings before rerunning the workflow.
 
 ## GitHub repository URL
 https://github.com/V1n1eX/intelligent-student-recommendation-system
